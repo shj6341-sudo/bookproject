@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리집은도서관</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div>
+                <ul class="header-top">
+                    <li class="list-item" id="topListA"><img src="./icons/독서지원B2B.png" alt="독서지원B2B">독서지원B2B</li>
+                    <li class="list-item" id="topListB"><img src="./icons/우도퀴즈.png" alt="우도퀴즈">우도퀴즈</li>
+                    <li class="list-item" id="topListC"><img src="./icons/위탁수익검색.png" alt="위탁수익검색">위탁수익검색</li>
+                    <li class="list-item" id="topListD"><img src="./icons/고객센터.png" alt="고객센터">고객센터</li>
+                    <li class="list-item" id="topListE"><img src="./icons/로그인회원가입.png" alt="로그인/회원가입">로그인 / 회원가입</li>
+                </ul>
+                <div class="title-container">
+                    <div>
+                        <h1 class="title-name"><img src="./icons/로고.png" alt="로고"> 우리집은 도서관</h3>
+                    </div>
+                    <div class="search-box">
+                        <input id="searchInput" type="text" placeholder="제목, 작가, 태그, 시리즈명, Pick을 검색해 보세요.">
+                        <button id="searchBtn"><img src="./icons/검색돋보기.png" alt="검색"></button>
+                    </div>
+                    <div class="user-icon">
+                        <img src="./icons/알림.png" alt="알림">
+                        <span class="divider"></span>
+                        <img src="./icons/장바구니.png" alt="장바구니">
+                    </div>
+                </div>
+                <div class="headerBo">
+                    <img src="./icons/메뉴햄버거.png" alt="메뉴">
+                    <span class="divider"></span>
+                    <ul class="list-item header-list-item">
+                        <li>베스트 도서 대여</li>
+                        <li>신간 도서 대여</li>
+                        <li>새책 구매</li>
+                        <li>중고책 구매</li>
+                        <li>PICK</li>
+                        <li>인기 도서관</li>
+                        <li>리딩게이트</li>
+                    </ul>
+                    <div class="user-main">
+                        <span class="user-main-total user-main-one"><img src="./icons/관심도서.png">관심도서</span>
+                        <span class="user-main-total user-main-two"><img src="./icons/주문현황.png">주문현황</span>
+                        <span class="user-main-total user-main-three"><img src="./icons/내도서관.png">내 도서관</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main-contanier">
+            <section id="heroSection">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/이용안내 이미지 01.png"></div>
+                        <div class="swiper-slide"><img src="./images/이용안내 이미지 02.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/이용안내 이미지 03.png"></div>
+                        <div class="swiper-slide"><img src="./images/이용안내 이미지 04.png"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </section>
+            <section id="bestSection">
+                <div class="best-books">
+                    <h3>베스트 도서</h3>
+                    <p class="more-view">더보기 →</p>
+                </div>
+                <div class="books-wrapper">
+                    <div class="book-container">
+                        <div class="book-img"></div>
+                        <div class="book-condition">새책 구매가능</div>
+                        <div class="book-info">
+                            <p class="book-from">단행본</p>
+                            <p class="book-title">제목</p>
+                            <p class="book-price">-원</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section id="newSection">
+                <div class="new-books">
+                    <h3>신간 도서</h3>
+                    <p class="more-view">더보기 →</p>
+                </div>
+                <div class="books-wrapper">
+                    <div class="book-container">
+                        <div class="book-condition">새책 구매가능</div>
+                        <div class="book-info">
+                            <p class="book-from">단행본</p>
+                            <p class="book-title">제목</p>
+                            <p class="book-price">-원</p> -->
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer> </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
