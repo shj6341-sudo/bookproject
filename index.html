@@ -22,7 +22,7 @@
                 </ul>
                 <div class="title-container">
                     <div>
-                        <h1 class="title-name"><img src="./icons/로고.png" alt="로고"> 우리집은 도서관</h3>
+                        <h1 class="title-name"><img src="./icons/로고.png" alt="로고"> 우리집은 도서관</h1>
                     </div>
                     <div class="search-box">
                         <input id="searchInput" type="text" placeholder="제목, 작가, 태그, 시리즈명, Pick을 검색해 보세요.">
@@ -74,7 +74,7 @@
                     <h3>베스트 도서</h3>
                     <p class="more-view">더보기 →</p>
                 </div>
-                <div class="books-wrapper">
+                <div class="books-wrapper" id="bestWrapper">
                     <div class="book-container">
                         <div class="book-img"></div>
                         <div class="book-condition">새책 구매가능</div>
@@ -82,21 +82,21 @@
                             <p class="book-from">단행본</p>
                             <p class="book-title">제목</p>
                             <p class="book-price">-원</p>
-                            <p class="book-review-score">☆☆☆☆☆(1서평)</p>
                         </div>
                     </div>
                 </div>
+
             </section>
             <section id="newSection">
                 <div class="new-books">
                     <h3>신간 도서</h3>
                     <p class="more-view">더보기 →</p>
                 </div>
-                <div class="books-wrapper">
+                <div class="books-wrapper" id="newWrapper">
                     <div class="book-container">
                         <div class="book-img"></div>
                         <div class="book-condition">새책 구매가능</div>
-                        <div class="new-book-info">
+                        <div class="book-info">
                             <p class="book-from">단행본</p>
                             <p class="book-title">제목</p>
                             <p class="book-price">-원</p>
@@ -116,19 +116,91 @@
                     <h3>서평&추천의 글</h3>
                     <p class="more-view">더보기 →</p>
                 </div>
-                <article class="recommend-container">
-                    <div class="recommend-box">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </article>
+                <div class="recommend-container">
+                    <article class="recommend-box">
+                        <p class="recommend-book-title">제목</p>
+                        <p class="recommend-book-short">요약...</p>
+                        <p class="recommend-book-review"><img src="./icons/Union.png">--님의 서평</p>
+                        <p class="recommend-book-age"><img src="./icons/Vector 8.png">초등5 읽음</p>
+                    </article>
+                    <article class="recommend-box">
+                        <p class="recommend-book-title">제목</p>
+                        <p class="recommend-book-short">요약...</p>
+                        <p class="recommend-book-review"><img src="./icons/Union.png">--님의 서평</p>
+                        <p class="recommend-book-age"><img src="./icons/Vector 8.png">초등5 읽음</p>
+                    </article>
+                    <article class="recommend-box">
+                        <p class="recommend-book-title">제목</p>
+                        <p class="recommend-book-short">요약...</p>
+                        <p class="recommend-book-review"><img src="./icons/Union.png">--님의 서평</p>
+                        <p class="recommend-book-age"><img src="./icons/Vector 8.png">초등5 읽음</p>
+                    </article>
+                    <article class="recommend-box">
+                        <p class="recommend-book-title">제목</p>
+                        <p class="recommend-book-short">요약...</p>
+                        <p class="recommend-book-review"><img src="./icons/Union.png">--님의 서평</p>
+                        <p class="recommend-book-age"><img src="./icons/Vector 8.png">초등5 읽음</p>
+                    </article>
+                    <article class="recommend-box">
+                        <p class="recommend-book-title">제목</p>
+                        <p class="recommend-book-short">요약...</p>
+                        <p class="recommend-book-review"><img src="./icons/Union.png">--님의 서평</p>
+                        <p class="recommend-book-age"><img src="./icons/Vector 8.png">초등5 읽음</p>
+                    </article>
+                    <article class="recommend-box">
+                        <p class="recommend-book-title">제목</p>
+                        <p class="recommend-book-short">요약...</p>
+                        <p class="recommend-book-review"><img src="./icons/Union.png">--님의 서평</p>
+                        <p class="recommend-book-age"><img src="./icons/Vector 8.png">초등5 읽음</p>
+                    </article>
+                </div>
+                <button class="recommend-more-btn"><img src="./icons/Group 2.png"></button>
             </section>
         </main>
-        <footer> </footer>
     </div>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-title">
+                <p>공지사항</p>
+                <p>📢우도 플리마켓 진행 예고!(오늘 저녁 8시) </p>
+            </div>
+            <section class="footer-main">
+                <div class="footer-main-left">
+                    <h1 class="title-name footer-main-title"><img src="./icons/로고.png"> 우리집은 도서관</h1>
+                    <p>소재지 : 제주특별자치도 서귀포시 돈내코로 172, 304동</p>
+                    <p>물류센터 주소지 : 경기도 파주시 탑삭골길 330-60</p>
+                    <p>통신판매업 신고 : 2022-제주영천-25</p>
+                    <p>사업자 등록번호 : 104-86-60468</p>
+                    <p>운영시간 : 월~금요일 10:00 ~ 17:00 (휴게시간 : 12:00 ~ 13:00)*공휴일 휴무</p>
+                    <p>상호명 : (주)스파이더 랩 / 대표자명 : 원용준</p>
+                    <p>전화번호 : 031-939-046</p>
+                    <p>1:1 문의는 아래의 ‘카카오톡 상담’을 이용해주세요</p>
+                    <div class="cacao-1by1">1:1 카카오톡 상담 (평일 10:00 ~ 17:00)</div>
+                </div>
+                <dl class="footer-main-middle">
+                    <dt>소개</dt>
+                    <dd>회사소개</dd>
+                    <dd>공지사항</dd>
+                    <dd>언론보도</dd>
+                    <dd>개인정보처리방침</dd>
+                    <dd>이용약관</dd>
+                    <dd>독서지원B2B</dd>
+                </dl>
+                <div class="footer-main-right">
+                    <dt>SNS</dt>
+                    <dd><img src="./icons/instar 1.png" alt=""></dd>
+                    <dd><img src="./icons/naver-icon 1.png" alt=""></dd>
+                </div>
+            </section>
+            <div class="footer-end">
+                <p>©2023 Spiderlab.All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 
+    <script src="./js/script.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.mySwiper', {

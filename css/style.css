@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-#wrapper{
+#wrapper, .footer-inner{
     max-width: 1380px;
     width: 100%;
     margin: 0 auto;
@@ -185,17 +185,16 @@ h3{
 }
 .books-wrapper{
     display: grid;
-    grid-template-columns: repeat(6, 211px);
+    grid-template-columns: repeat(6, 1fr);
 }
 .book-container{
-    border: 1px solid #000;
     position: relative;
     margin: 0 10px;
+    padding: 0 10px;
 }
-.book-img{
+.book-img img{
     width: 100%;
-    height: 271px;
-    background-color: yellowgreen;
+    height: auto;
 }
 .book-condition{
     position: absolute;
@@ -208,13 +207,6 @@ h3{
     text-align: center;
     color: #fff;
     border-radius: 2px;
-}
-.book-info{
-    position: absolute;
-    width: 100%;
-    height: 91px;
-    background: #fff;
-    bottom: 0px;
 }
 .book-info p{
     text-align: center;
@@ -230,7 +222,7 @@ h3{
     font-size: 16px;
     font-weight: bold;
 }
-.new-book-info{
+.book-info{
     position: absolute;
     width: 100%;
     height: 71px;
@@ -252,6 +244,89 @@ h3{
     height: 180px;
     border-radius: 5px;
 }
-#section2{
+#section2, #section3{
     margin-bottom: 50px;
+}
+.recommend-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.recommend-box{
+    border: 1px solid none;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    width: 220px;
+    height: 180px;
+    flex-shrink: 0;
+    padding: 15px 15px;
+}
+.recommend-book-title, .recommend-book-review, .recommend-book-age{
+    font-size: 14px;
+    color: #666666;
+}
+.recommend-book-short{
+    height: 80px;
+}
+#section3{
+    position: relative;
+}
+.recommend-more-btn{
+    position: absolute;
+    top: 60%;
+    right: 0;
+    border: none;
+    background: none;
+}
+footer{
+    width: 100%;
+    background-color: #222222;
+    margin-top: 50px;
+}
+.footer-title{
+    padding: 30px 0;
+    font-size: 16px;
+    display: flex;
+}
+.footer-title p{
+    color: #fff;
+    padding: 2px 10px;
+    margin-right: 20px;
+}
+.footer-title p:first-child{
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.footer-main{
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    border-top: 2px solid #666666;
+    border-bottom: 2px solid #666666;
+    padding: 30px 0;
+    color: #ccc;
+
+}
+.footer-main h1, .footer-main dt{
+    color: #fff;
+}
+.footer-main dt{
+    font-weight: 700;   
+}
+.footer-main p, .footer-main dd{
+    padding: 8px 0;
+    font-size: 16px;
+}
+.cacao-1by1{
+    border: 1px solid #fff;
+    width: fit-content;
+    padding: 3px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.footer-end{
+    font-size: 16px;
+    margin: 40px 0 0;
+    color: #6d6c6c;
 }
