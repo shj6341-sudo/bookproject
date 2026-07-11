@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>`${book.title} 상세페이지`</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main id="wrapper">
+        <header>
+            <section id="headerContainer">
+                <ul class="header-top">
+                    <li class="list-item" id="topListA"><img src="../book-project-main/icons/독서지원B2B.png"
+                            alt="독서지원B2B">독서지원B2B</li>
+                    <li class="list-item" id="topListB"><img src="../book-project-main/icons/우도퀴즈.png" alt="우도퀴즈">우도퀴즈
+                    </li>
+                    <li class="list-item" id="topListC"><img src="../book-project-main/icons/위탁수익검색.png"
+                            alt="위탁수익검색">위탁수익검색
+                    </li>
+                    <li class="list-item" id="topListD"><img src="../book-project-main/icons/고객센터.png" alt="고객센터">고객센터
+                    </li>
+                    <li class="list-item" id="topListE"><img src="../book-project-main/icons/로그인회원가입.png"
+                            alt="로그인/회원가입">로그인
+                        / 회원가입</li>
+                </ul>
+                <div class="title-container">
+                    <div>
+                        <h1 class="title-name"><img src="../book-project-main/icons/로고.png" alt="로고"> 우리집은 도서관</h1>
+                    </div>
+                    <div class="search-box">
+                        <input id="searchInput" type="text" placeholder="제목, 작가, 태그, 시리즈명, Pick을 검색해 보세요.">
+                        <button id="searchBtn"><img src="../book-project-main/icons/검색돋보기.png" alt="검색"></button>
+                    </div>
+                    <div class="user-icon">
+                        <img src="../book-project-main/icons/알림.png" alt="알림">
+                        <span class="divider"></span>
+                        <img src="../book-project-main/icons/장바구니.png" alt="장바구니">
+                    </div>
+                </div>
+                <div class="headerBo">
+                    <img src="../book-project-main/icons/메뉴햄버거.png" alt="메뉴">
+                    <span class="divider"></span>
+                    <ul class="list-item header-list-item">
+                        <li>베스트 도서 대여</li>
+                        <li>신간 도서 대여</li>
+                        <li>새책 구매</li>
+                        <li>중고책 구매</li>
+                        <li>PICK</li>
+                        <li>인기 도서관</li>
+                        <li>리딩게이트</li>
+                    </ul>
+                    <div class="user-main">
+                        <span class="user-main-total user-main-one"><img
+                                src="../book-project-main/icons/관심도서.png">관심도서</span>
+                        <span class="user-main-total user-main-two"><img
+                                src="../book-project-main/icons/주문현황.png">주문현황</span>
+                        <span class="user-main-total user-main-three"><img src="../book-project-main/icons/내도서관.png">내
+                            도서관</span>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <p class="book-page-top"><span class="font-cloud">책 정보 > </span>`${book.title}`</p>
+        <div id="mainPageContainer">
+            <div>
+                <section id="bookPage">
+                    <div class="book-page-container">
+                        <article class="book-img-box">
+                            <div class="main-book-img">-책이미지-</div>
+                            <p class="book-preview-btn"><img src="../book-project-main/icons/도서미리보기.png">도서 미리보기</p>
+                        </article>
+
+                        <article class="book-to-buy">
+                            <div>
+                                <p class="onto-title">단행본</p>
+                                <h2 class="book-title">-제목-</h2>
+                                <p class="book-reviews"><span class="star">★★★★★</span> (20 Reviews)</p>
+                            </div>
+
+                            <div class="book-buy-container">
+                                <button>대여</button>
+                                <button>새책</button>
+                                <button>중고</button>
+                            </div>
+
+                            <div class="book-price">
+                                <p>새책 |</p>
+                                <span class="sale-percent">10%</span>
+                                <h3 class="book-price-sale">11,700원</h3>
+                                <span class="book-price-ori">13,000원</span>
+                            </div>
+
+                            <div class="new-user-event">
+                                <div class="event-title">
+                                    <p><img src="../book-project-main/icons/회원가입할인.png">
+                                        <span class="color-orange">회원가입</span>
+                                        후, 혜택받고 도서를 대여해 보세요
+                                    </p>
+                                    <span class="event-more">></span>
+                                </div>
+
+
+                                <div class="event-first">
+                                    <div class="event-first-first-line">
+                                        <p>첫 대여시 <span class="color-orange">30%</span> 할인</p>
+                                    </div>
+                                    <div>
+                                        <p class="event-first-second-line">지금 가입하면 최대 <span
+                                                class="color-orange">4,000</span>원 지급</p>
+                                        <p class="event-first-third-line">웰컴 포인트 2,000원 + 추천인 입력시 2,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="delivery-container">
+                                <div class="delivery-box">
+
+                                    <div>
+                                        <img src="../book-project-main/icons/배송.png">
+                                    </div>
+                                    <div class="delivery-box-text">
+                                        <p>
+                                            <span class="font-cloud delivery-cloud">배송일</span>
+                                            <span class="font-accent">오늘 출발</span>
+                                        </p>
+                                        <p class="after-time-three">
+                                            오후 3시 이후 주문시 
+                                            <span class="font-accent">내일 출발</span>
+                                        </p>
+                                        <p>
+                                            <span class="font-cloud delivery-cloud">배송비</span>
+                                            30,000원 이상 주문 시 
+                                            <span class="font-accent">무료배송</span>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <button class="into-cart-bth"><img src="../book-project-main/icons/장바구니에 담기.png">장바구니에
+                                    담기
+                                </button>
+
+                            </div>
+
+                        </article>
+                    </div>
+                </section>
+
+                <section id="bookInfo">
+                    <nav>
+                        <p>도서소개</p>
+                        <p>도서 서평(4)</p>
+                        <p>추천의 글(1)</p>
+                    </nav>
+                    <div>
+                        <h4>도서 설명</h4>
+                        <p>이도서는...</p>
+                    </div>
+                </section>
+
+                <section id="bookWith">
+                    <div class="best-books">
+                        <h3>이 책과 함께 주문된 도서</h3>
+                    </div>
+                    <div class="books-wrapper" id="bestWrapper">
+                        <div class="book-container">
+                            <div class="book-img"></div>
+                            <div class="book-condition">새책 구매가능</div>
+                            <div class="book-info">
+                                <p class="book-from">단행본</p>
+                                <p class="book-title">제목</p>
+                                <p class="book-price">-원</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <section id="aside">
+                <aside class="aside-box">
+                    <h4 class="aside-title">도서정보</h4>
+                    <div class="row">
+                        <p>ISBN</p><span class="aside-font">000000</span>
+                    </div>
+                    <div class="row">
+                        <p>글쓴이</p> <span class="aside-font">000</span>
+                    </div>
+                    <div class="row">
+                        <p>출판사</p><span class="aside-font">0000</span>
+                    </div>
+                    <div class="row">
+                        <p>출간일</p><span class="aside-font">0000-00-00</span>
+                    </div>
+                    <div class="row">
+                        <p>정가</p><span class="aside-font">0000원</span>
+                    </div>
+                </aside>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-title">
+                <p>공지사항</p>
+                <p>📢우도 플리마켓 진행 예고!(오늘 저녁 8시) </p>
+            </div>
+            <section class="footer-main">
+                <div class="footer-main-left">
+                    <h1 class="title-name footer-main-title"><img src="../book-project-main/icons/로고.png"> 우리집은 도서관</h1>
+                    <p>소재지 : 제주특별자치도 서귀포시 돈내코로 172, 304동</p>
+                    <p>물류센터 주소지 : 경기도 파주시 탑삭골길 330-60</p>
+                    <p>통신판매업 신고 : 2022-제주영천-25</p>
+                    <p>사업자 등록번호 : 104-86-60468</p>
+                    <p>운영시간 : 월~금요일 10:00 ~ 17:00 (휴게시간 : 12:00 ~ 13:00)*공휴일 휴무</p>
+                    <p>상호명 : (주)스파이더 랩 / 대표자명 : 원용준</p>
+                    <p>전화번호 : 031-939-046</p>
+                    <p>1:1 문의는 아래의 ‘카카오톡 상담’을 이용해주세요</p>
+                    <div class="cacao-1by1">1:1 카카오톡 상담 (평일 10:00 ~ 17:00)</div>
+                </div>
+                <dl class="footer-main-middle">
+                    <dt>소개</dt>
+                    <dd>회사소개</dd>
+                    <dd>공지사항</dd>
+                    <dd>언론보도</dd>
+                    <dd>개인정보처리방침</dd>
+                    <dd>이용약관</dd>
+                    <dd>독서지원B2B</dd>
+                </dl>
+                <div class="footer-main-right">
+                    <dt>SNS</dt>
+                    <dd><img src="../book-project-main/icons/instar 1.png" alt=""></dd>
+                    <dd><img src="../book-project-main/icons/naver-icon 1.png"></dd>
+                </div>
+            </section>
+            <div class="footer-end">
+                <p>©2023 Spiderlab.All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
