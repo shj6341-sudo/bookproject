@@ -12,7 +12,7 @@ async function getBooksFromServer(query, sortType) {
     const books = data.documents;
 
     return books;
-}
+};
 
 function renderBookCards(books, containerId) {
     const container = document.getElementById(containerId);
@@ -24,12 +24,9 @@ function renderBookCards(books, containerId) {
     books.forEach(book => {
         const card = document.createElement('div');
         card.className = 'book-container';
-
-        const authorsName = book.authors.length > 0 ? book.authors.join(', ') : '저자 미상';
+        card.style.cursor = 'pointer';
 
         const thumbnailSrc = book.thumbnail ? book.thumbnail : 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=150&h=200&fit=crop';
-
-        const contents = book.contents ? book.contents : '등록된 도서 소개가 없습니다.';
 
         const formattedPrice = book.sale_price > 0 ? `${book.sale_price.toLocaleString()}원` : '판매 중지 /가격 미정';
 
@@ -46,20 +43,19 @@ function renderBookCards(books, containerId) {
 
         card.innerHTML = cardHTML;
 
-        // 카드의 링크 처리
-        card.style.cursor = 'pointer';
-        card.onclick = () => {
-            window.open(book.url, '_blank');
-        }
-        // DOM Tree에 추가
+        card.addEventListener('click', () => {
+        window.location.href = `../book-project-sub/index.html?isbn=${book.isbn}`;
+         });
+        
+        
         container.appendChild(card);
     });
-}
+};
 
 function renderErrorMessage(containerId, message) {
     const container = document.getElementById(containerId);
     container.innerHTML = `<p>데이터를 가져오지 못했습니다.</p>`;
-}
+};
 
 async function initBookSite() {
     try {

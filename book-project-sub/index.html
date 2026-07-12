@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>`${book.title} 상세페이지`</title>
+    <title>상세페이지</title>
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -64,34 +64,37 @@
                 </div>
             </section>
         </header>
-        <p class="book-page-top"><span class="font-cloud">책 정보 > </span>`${book.title}`</p>
+        <p id="book-page-top"><span class="font-cloud">책 정보 > </span><span>-책 제목-</span></p>
         <div id="mainPageContainer">
             <div>
                 <section id="bookPage">
                     <div class="book-page-container">
                         <article class="book-img-box">
-                            <div class="main-book-img">-책이미지-</div>
+                            <div id="main-book-img">-책이미지-</div>
                             <p class="book-preview-btn"><img src="../book-project-main/icons/도서미리보기.png">도서 미리보기</p>
                         </article>
 
                         <article class="book-to-buy">
-                            <div>
-                                <p class="onto-title">단행본</p>
-                                <h2 class="book-title">-제목-</h2>
-                                <p class="book-reviews"><span class="star">★★★★★</span> (20 Reviews)</p>
-                            </div>
+                            <div id="book-to-buy-java">
+                                <div>
+                                    <p class="onto-title">단행본</p>
+                                    <h2 class="book-title">-제목-</h2>
+                                    <p class="book-reviews"><span class="star">★★★★★</span> (20 Reviews)</p>
+                                </div>
 
-                            <div class="book-buy-container">
-                                <button>대여</button>
-                                <button>새책</button>
-                                <button>중고</button>
-                            </div>
+                                <div class="book-buy-container">
+                                    <button>대여</button>
+                                    <button>새책</button>
+                                    <button>중고</button>
+                                </div>
+                            
 
                             <div class="book-price">
                                 <p>새책 |</p>
                                 <span class="sale-percent">10%</span>
                                 <h3 class="book-price-sale">11,700원</h3>
                                 <span class="book-price-ori">13,000원</span>
+                            </div>
                             </div>
 
                             <div class="new-user-event">
@@ -128,12 +131,12 @@
                                             <span class="font-accent">오늘 출발</span>
                                         </p>
                                         <p class="after-time-three">
-                                            오후 3시 이후 주문시 
+                                            오후 3시 이후 주문시
                                             <span class="font-accent">내일 출발</span>
                                         </p>
                                         <p>
                                             <span class="font-cloud delivery-cloud">배송비</span>
-                                            30,000원 이상 주문 시 
+                                            30,000원 이상 주문 시
                                             <span class="font-accent">무료배송</span>
                                         </p>
                                     </div>
@@ -151,32 +154,37 @@
                 </section>
 
                 <section id="bookInfo">
-                    <nav>
-                        <p>도서소개</p>
-                        <p>도서 서평(4)</p>
-                        <p>추천의 글(1)</p>
-                    </nav>
-                    <div>
+                    <ul class="bookInfo-nav">
+                        <li>도서소개</li>
+                        <li>도서 서평(4)</li>
+                        <li>추천의 글(1)</li>
+                    </ul>
+                    <div class="bookInfo-about">
                         <h4>도서 설명</h4>
                         <p>이도서는...</p>
                     </div>
                 </section>
 
                 <section id="bookWith">
-                    <div class="best-books">
+                    <div class="bookWith-title">
                         <h3>이 책과 함께 주문된 도서</h3>
                     </div>
-                    <div class="books-wrapper" id="bestWrapper">
+                    <div class="books-wrapper" id="recWrapper">
                         <div class="book-container">
-                            <div class="book-img"></div>
+                            <div class="book-img">
+                                <img src="" alt="">
+                            </div>
                             <div class="book-condition">새책 구매가능</div>
                             <div class="book-info">
-                                <p class="book-from">단행본</p>
-                                <p class="book-title">제목</p>
-                                <p class="book-price">-원</p>
+                                <p class="under-book-from">단행본</p>
+                                <p class="under-book-title">제목</p>
+                                <p class="under-book-price">10,000원</p>
                             </div>
                         </div>
                     </div>
+
+
+
                 </section>
             </div>
 
@@ -243,6 +251,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>
