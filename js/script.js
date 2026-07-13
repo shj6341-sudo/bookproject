@@ -44,7 +44,7 @@ function renderBookCards(books, containerId) {
         card.innerHTML = cardHTML;
 
         card.addEventListener('click', () => {
-        window.location.href = `../book-project-sub/index.html?isbn=${book.isbn}`;
+        window.location.href = `./subpage.html?isbn=${book.isbn}`;
          });
         
         

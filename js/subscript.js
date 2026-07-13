@@ -134,7 +134,7 @@ async function RenderBookPage() {
             card.innerHTML = containerHTML;
 
             card.addEventListener('click',() => {
-                window.location.href = `./index.html?isbn=${recBook.isbn}`;
+                window.location.href = `./subpage.html?isbn=${recBook.isbn}`;
             });
         recWrapper.appendChild(card);
     });
