@@ -67,7 +67,7 @@ function renderErrorMessage(containerId, message) {
 async function initBookSite() {
     try {
         const bestBooks = await getBooksFromServer('베스트셀러', 'accuracy');
-        const newBooks = await getBooksFromServer('2026', 'latest');
+        const newBooks = await getBooksFromServer('소설', 'latest');
         renderBookCards(bestBooks, 'bestWrapper');
         renderBookCards(newBooks, 'newWrapper');
     } catch (error) {

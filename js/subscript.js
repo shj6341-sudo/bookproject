@@ -31,7 +31,14 @@ async function RenderBookPage() {
         return;
     }
 
-    const thumbnailSrc = book.thumbnail ? book.thumbnail : 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=150&h=200&fit=crop';
+    let thumbnailSrc = book.thumbnail 
+    if (thumbnailSrc && thumbnailSrc.includes('/thumb/R120x174.q85/?fname=')) {
+            thumbnailSrc = decodeURIComponent(thumbnailSrc.split('?fname=')[1]);
+        };
+
+        // 2. 가공된 큰 이미지 주소를 src에 넣어줍니다.
+        thumbnailSrc = thumbnailSrc || "<https://via.placeholder.com/150x220?text=No+Image>";
+
     const formattedPrice = book.sale_price > 0 ? `${book.sale_price.toLocaleString()}원` : '판매 중지 /가격 미정';
     const oriPrice = book.price > 0 ? `${book.price.toLocaleString()}원` : '판매 중지 /가격 미정';
     const status = book.status ? book.status : "문의바람";
