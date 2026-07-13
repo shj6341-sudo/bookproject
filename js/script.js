@@ -44,7 +44,14 @@ function renderBookCards(books, containerId) {
         card.innerHTML = cardHTML;
 
         card.addEventListener('click', () => {
-        window.location.href = `./subpage.html?isbn=${book.isbn}`;
+            console.log("여기까지 ", book.sale_price);
+            if(book.sale_price <= 0 ){
+               console.error("책 정보를 찾을 수 없습니다.");
+               alert ("책 정보를 찾을 수 없습니다.");
+               return;
+            } else{
+               window.location.href = `./subpage.html?isbn=${book.isbn}`;
+            }
          });
         
         

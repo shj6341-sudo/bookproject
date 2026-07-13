@@ -109,6 +109,12 @@ async function RenderBookPage() {
     const authorName = book.authors[0];
     const recommendBooks = await getRecommendBooksData(authorName);
 
+     if (!recommendBooks) {
+        console.error("책 정보를 찾을 수 없습니다.");
+        document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>책 정보를 찾을 수 없습니다. </h1>";
+        return;
+    }
+
     const recWrapper = document.getElementById('recWrapper');
     recWrapper.innerHTML = '';
 
@@ -133,8 +139,15 @@ async function RenderBookPage() {
             `;
             card.innerHTML = containerHTML;
 
-            card.addEventListener('click',() => {
-                window.location.href = `./subpage.html?isbn=${recBook.isbn}`;
+           card.addEventListener('click', () => {
+            console.log("여기까지 ", recBook.sale_price);
+            if(recBook.sale_price <= 0 ){
+               console.error("책 정보를 찾을 수 없습니다.");
+               alert ("책 정보를 찾을 수 없습니다.");
+               return;
+            } else{
+               window.location.href = `./subpage.html?isbn=${recBook.isbn}`;
+            }
             });
         recWrapper.appendChild(card);
     });
