@@ -231,7 +231,7 @@ h3{
 .book-info{
     position: absolute;
     width: 100%;
-    height: 96px;
+    height: auto;
     background: #fff;
     bottom: -25px;
     text-align: center;

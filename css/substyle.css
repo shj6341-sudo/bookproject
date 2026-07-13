@@ -496,6 +496,7 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 500;
 }
 .under-book-price{
     font-size: 16px;
@@ -504,19 +505,19 @@ h1 {
 .book-info{
     position: absolute;
     width: 100%;
-    height: 96px;
+    height: auto;
     background: #fff;
     bottom: -25px;
     text-align: center;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease ;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
 .book-container:hover .book-info{
     transform: translateY(-25px);
     background-color: rgba(255, 255, 255, 0.8);
 }
-.book-container:hover .book-title{
+.book-container:hover .under-book-title{
     white-space: wrap;
 }
 
