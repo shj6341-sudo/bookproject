@@ -418,6 +418,7 @@ h1 {
     font-size: 14px ;
     padding: 14px 10px;
     border-radius: 6px;
+    cursor: pointer;
 }
 .into-cart-bth img{
     padding: 0 8px;
